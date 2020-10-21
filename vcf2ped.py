@@ -4,7 +4,7 @@
 #Because the ped format require "proper" chromosome names I have made a script that will first fix this issue in a Stacks generated vcf file (chromosome names are numbers, which plink confuses with actual chromosome number).
 #Then then script runs a command that runs plink and converts the vcf to ped format in the 12-format that is needed for Admixture 
 
-#run like this: path/to/convertVcf2Plink.py -i path/to/myOrganism.vcf -o path/to/myOrganism
+#run like this: path/to/vcf2ped.py -i path/to/myOrganism.vcf -o path/to/myOrganism
 #not that there should be not file ending on the outputfile, plink creates multiple files and assigns file ending automatically.
 
 import sys
