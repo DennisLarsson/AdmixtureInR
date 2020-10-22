@@ -1,9 +1,9 @@
 library(parallel)
 
-setwd("/path/to/workDirectory")
-pedfile="inputfile.ped"
-outputFolder="outputfolder"
-popmap="/path/to/popmap"      #give the name of the popmap if it is in the work directory or the full path if it is somewhere else
+setwd("/path/to/workDirectory")  #give the path to the work directory where you files are and/or where you would like to output files to go
+pedfile="inputfile.ped"          #give the name of the file if it is in the work directory or the full path if it is somewhere else
+outputFolder="outputfolder"      #give the name of the output folder
+popmap="/path/to/popmap"         #give the name of the popmap if it is in the work directory or the full path if it is somewhere else
 maxK=10
 
 NrCores=NULL # NULL can be replaced with a number of cores if you don't want to use all.
