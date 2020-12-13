@@ -48,7 +48,7 @@ for (K in 2:maxK) {
   barplot(t(qmatrix), border = NA, space = 0, ylab = "Ancestry coefficients", col = colorsPlot, main = paste("Ancestry coefficients for K=",K,sep = ""))
   
   #plot lines and names of populations into the plot
-  axis(1, tapply(1:nrow(pop), pop[,2],mean),unique(pop_sorted[,2]),las=2, cex.axis=0.7, tick = F, line = -0.8)
+  axis(1, tapply(1:nrow(pop), pop[,2],mean),unique(pop_sorted[,2]),las=2, cex.axis=1, tick = F, line = -0.8)
   abline(v=tapply(1:nrow(pop), pop[,2],max), lty=2, lwd=0.5)
   
   #write the qmatrix to a csv file that can be used in other applications.
