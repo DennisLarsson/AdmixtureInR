@@ -1,3 +1,4 @@
+#version 1.11
 library(parallel)
 
 setwd("/path/to/workDirectory")  #give the path to the work directory where you files are and/or where you would like to output files to go
@@ -39,7 +40,7 @@ system(paste("grep -h CV log*.out > ../",logfile,sep=""))
 
 CV<-read.table(file=paste("../",logfile,sep=""))
 
-pdf(file=paste(filename,"_admixture.pdf",sep=""), height = 5, width = 8, title = filename)
+pdf(file=paste(filename,"_admixture.pdf",sep=""), height = 5, width = 8, title = paste(filename,"_admixture",sep=""))
 plot(CV$V4,main = "Cross validation error estimates",type = "b", ylab = "Cross validation score", xlab = "K-value")
 for (K in 2:maxK) {
   qmatrix<-read.table(paste(filename,".",K,".","Q",sep=""))
